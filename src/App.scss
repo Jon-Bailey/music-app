@@ -2,11 +2,14 @@ $greyDark: #040404;
 $greyLight: #131313;
 $greyLighter: #282828;
 $controls: #181818;
+$textGrey: #b3b3b3;
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap");
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
 }
 
 .App {
@@ -14,17 +17,72 @@ $controls: #181818;
   height: calc(100vh - 91px);
   min-height: 100%;
   color: white;
+  display: flex;
 }
 
 .navbar {
   width: 232px;
   height: 100%;
   background-color: #000;
+  color: white;
+  padding: 10px;
   .logo {
-    padding: 1.5rem 1.5rem;
+    padding: 1.5rem 0.5rem;
     img {
       max-width: 140px;
-      
+    }
+  }
+  ul {
+    font-weight: 600;
+    li {
+      list-style-type: none;
+      color: $textGrey;
+      padding: 0.7rem 1rem;
+      cursor: pointer;
+      border-radius: 5px;
+      &.active {
+        background: $greyLighter;
+        color: white;
+      }
+      &:hover {
+        color: white;
+      }
+    }
+  }
+}
+
+.main {
+  width: 100%;
+  .mainHeader {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    width: 100%;
+    height: 60px;
+    background-color: $controls;
+    position: relative;
+  }
+  .mainContent {
+    padding: 1rem;
+    display: flex;
+  }
+}
+
+.cardWrapper {
+  margin: 0.7rem;
+  .card {
+    background: $greyLighter;
+    width: 200px;
+    height: 300px;
+    padding: 1rem;
+    border-radius: 5px;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .cardText {
+      padding-top: 0.5rem;
     }
   }
 }
@@ -37,4 +95,5 @@ $controls: #181818;
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
 }
