@@ -40,6 +40,8 @@ $textGrey: #b3b3b3;
       padding: 0.7rem 1rem;
       cursor: pointer;
       border-radius: 5px;
+      display: flex;
+      align-items: center;
       &.active {
         background: $greyLighter;
         color: white;
@@ -96,4 +98,9 @@ $textGrey: #b3b3b3;
   justify-content: center;
   align-items: center;
   position: relative;
+}
+
+.icon {
+  width: 25px;
+  margin-right: 1rem;
 }

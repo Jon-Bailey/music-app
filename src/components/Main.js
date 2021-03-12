@@ -7,7 +7,6 @@ const Main = () => {
             <div className="mainHeader"></div>
             <div className="mainContent">
                 <Card />
-                <Card />
             </div>
         </div>
     )
